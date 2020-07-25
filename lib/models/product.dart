@@ -4,6 +4,6 @@ class Product {
   int price;
   String name;
   String brand;
-  String Descreption;
-
+  String descreption;
+  String image;
 }
