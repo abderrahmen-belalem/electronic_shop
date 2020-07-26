@@ -27,13 +27,24 @@ class HomePage extends StatelessWidget {
         ],
       ),
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Expanded(
             flex: 1,
-            child: Text('Explore \nElectronics'),
+            child: Padding(
+              padding: const EdgeInsets.only(left: 50, top: 25),
+              child: Text(
+                  'Explore \nElectronics',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 30,
+                  fontWeight: FontWeight.w700
+                ),
+              ),
+            ),
           ),
           Expanded(
-            flex: 3,
+            flex: 4,
             child: ChoiceCard(),
           ),
         ],
