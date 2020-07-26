@@ -91,7 +91,7 @@ class ChoiceCard extends StatelessWidget {
                                  fontWeight: FontWeight.bold
                                ),
                              ),
-                             SizedBox(height: 15),
+                             SizedBox(height: 32),
                              Image.asset('assets/laptop.png'),
                              Expanded(child: SizedBox()),
                              Row(
