@@ -16,14 +16,14 @@ class ChoiceCard extends StatelessWidget {
       ),
       color: Colors.white,
       child: Padding(
-        padding: const EdgeInsets.fromLTRB(23, 40, 0, 15),
+        padding: const EdgeInsets.fromLTRB(13, 40, 0, 15),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             Expanded(
               flex: 1,
               child: Padding(
-                padding: const EdgeInsets.only(left: 20, top: 3),
+                padding: const EdgeInsets.only(left: 35, top: 3),
                 child: ListView.separated(
                     separatorBuilder: (context, index) {
                       return SizedBox(width: 8);
@@ -54,7 +54,7 @@ class ChoiceCard extends StatelessWidget {
             Expanded(
               flex: 10,
               child: Padding(
-                padding: const EdgeInsets.fromLTRB(40, 20, 0, 0),
+                padding: const EdgeInsets.fromLTRB(45, 20, 0, 0),
                 child: ListView.separated(
                   separatorBuilder: (context, index){
                     return SizedBox(width: 40);
@@ -65,6 +65,7 @@ class ChoiceCard extends StatelessWidget {
                     return Container(
                         width: MediaQuery.of(context).size.width/2.2,
                       child: Card(
+                        elevation: 1.5,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(30)
                         ) ,
@@ -143,92 +144,96 @@ class ChoiceCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Padding(
-                    padding: const EdgeInsets.only(left: 15, top: 20),
+                    padding: const EdgeInsets.only(left: 22, top: 20),
                     child: Text(
                         'Best Selling',
                       style: TextStyle(
-                        fontSize: 18,
+                        fontSize: 16,
                         fontWeight: FontWeight.w700
                       ),
                     ),
                   ),
-                  SizedBox(height: 10),
+                  SizedBox(height: 20),
                   Expanded(
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(40),
-                      child: Container(
-                        width: MediaQuery.of(context).size.width/1.2,
-                        color: Colors.black,
-                        child: Padding(
-                          padding: const EdgeInsets.fromLTRB(10, 10, 15, 10),
-                          child: Row(
-                            crossAxisAlignment: CrossAxisAlignment.end,
-                            children: <Widget>[
-                          ClipRRect(
-                            borderRadius: BorderRadius.circular(35),
-                            child: Container(
-                              width: 110,
-                              height: 130,
-                              color: greyCard,
-                              child: Image.asset(
-                                  'assets/laptop.png',
-                                width: 100,
-                                fit: BoxFit.fitWidth,
-                              ),
-                            ),
-                          ),
-                              Padding(
-                                padding: const EdgeInsets.fromLTRB(18, 2, 0, 8),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: <Widget>[
-                                    Text(
-                                        'ASUS',
-                                      style: TextStyle(
-                                        fontSize: 11,
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.white
-                                      ),
-                                    ),
-                                    SizedBox(height: 5),
-                                    Text(
-                                        'Laptop',
-                                      style: TextStyle(
-                                        fontSize: 17,
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.white
-                                      ),
-                                    ),
-                                    Expanded(child: SizedBox()),
-                                    Text(
-                                        '350\$',
-                                      style: TextStyle(
-                                        fontSize: 17,
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.white
-                                      ),
-                                    ),
-                                  ],
+                    child: Material(
+                      borderRadius: BorderRadius.circular(30),
+                      elevation: 1.5,
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(30),
+                        child: Container(
+                          width: MediaQuery.of(context).size.width/1.17,
+                          color: Colors.black,
+                          child: Padding(
+                            padding: const EdgeInsets.fromLTRB(14, 14, 14, 14),
+                            child: Row(
+                              crossAxisAlignment: CrossAxisAlignment.end,
+                              children: <Widget>[
+                            ClipRRect(
+                              borderRadius: BorderRadius.circular(30),
+                              child: Container(
+                                width: 110,
+                                height: 130,
+                                color: greyCard,
+                                child: Image.asset(
+                                    'assets/laptop.png',
+                                  width: 100,
+                                  fit: BoxFit.fitWidth,
                                 ),
                               ),
-                              Expanded(child: SizedBox()),
-                              Padding(
-                                padding: const EdgeInsets.only(bottom: 10),
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(9),
-                                  child: Container(
-                                    color: Colors.white,
-                                    child: Padding(
-                                      padding: const EdgeInsets.all(5.0),
-                                      child: Icon(
-                                          Icons.arrow_forward,
-                                        size: 18,
+                            ),
+                                Padding(
+                                  padding: const EdgeInsets.fromLTRB(18, 2, 0, 8),
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: <Widget>[
+                                      Text(
+                                          'ASUS',
+                                        style: TextStyle(
+                                          fontSize: 11,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.white
+                                        ),
+                                      ),
+                                      SizedBox(height: 5),
+                                      Text(
+                                          'Laptop',
+                                        style: TextStyle(
+                                          fontSize: 17,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.white
+                                        ),
+                                      ),
+                                      Expanded(child: SizedBox()),
+                                      Text(
+                                          '350\$',
+                                        style: TextStyle(
+                                          fontSize: 17,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.white
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                Expanded(child: SizedBox()),
+                                Padding(
+                                  padding: const EdgeInsets.only(bottom: 10),
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(9),
+                                    child: Container(
+                                      color: Colors.white,
+                                      child: Padding(
+                                        padding: const EdgeInsets.all(5.0),
+                                        child: Icon(
+                                            Icons.arrow_forward,
+                                          size: 18,
+                                        ),
                                       ),
                                     ),
                                   ),
-                                ),
-                              )
-                            ],
+                                )
+                              ],
+                            ),
                           ),
                         ),
                       ),
