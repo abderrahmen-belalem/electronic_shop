@@ -1,6 +1,10 @@
+import 'dart:math';
+
 import 'package:electronic_app/models/product.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'const.dart';
+
 
 class HomePage extends StatefulWidget {
   @override
@@ -18,131 +22,135 @@ class _HomePageState extends State<HomePage> {
 
   List<Product> laptops = [
     Product(
-        price: 400,
-        name: 'laptop-1',
-        brand: 'asus',
+        price: 1399,
+        name: 'Microsoft Surface Laptop 3 Twister',
+        brand: 'Microsoft',
         descreption: 'description',
         image: 'laptop.png',
         category: 'Laptops'),
     Product(
-        price: 200,
-        name: 'laptop-2',
-        brand: 'asus',
+        price: 1499,
+        name: 'Microsoft Surface Laptop 3',
+        brand: 'Microsoft',
         descreption: 'description',
-        image: 'laptop.png',
+        image: 'laptop2.png',
         category: 'Laptops'),
     Product(
-        price: 400,
-        name: 'laptop-3',
-        brand: 'asus',
+        price: 1069,
+        name: 'Microsoft Surface Pro 7',
+        brand: 'Microsft',
         descreption: 'description',
-        image: 'laptop.png',
+        image: 'laptop3.png',
         category: 'Laptops'),
   ];
 
   List<Product> speakers = [
     Product(
-        price: 400,
-        name: 'speaker-1',
-        brand: 'asus',
+        price: 67,
+        name: 'Logitech Multimedia Speakers White Z200',
+        brand: 'Logitech',
         descreption: 'description',
-        image: 'laptop.png',
+        image: 'speaker.png',
         category: 'Speakers'),
     Product(
-        price: 200,
-        name: 'speaker-2',
-        brand: 'asus',
+        price: 739,
+        name: 'Audioengine 5+ Powered Bookshelf Speakers',
+        brand: 'Audioengine',
         descreption: 'description',
-        image: 'laptop.png',
+        image: 'speaker2.png',
         category: 'Speakers'),
     Product(
-        price: 400,
-        name: 'speaker-3',
-        brand: 'asus',
+        price: 399,
+        name: 'Kanto Living YU6 2-Way Powered Bookshelf',
+        brand: 'Kanto Living',
         descreption: 'description',
-        image: 'laptop.png',
+        image: 'speaker3.png',
         category: 'Speakers'),
   ];
 
   List<Product> headphones = [
     Product(
-        price: 400,
-        name: 'headphone-1',
-        brand: 'asus',
+        price: 47,
+        name: 'Xiaomi Mi Bluetooth Headphones Foldable Headset',
+        brand: 'Xiaomi',
         descreption: 'description',
-        image: 'laptop.png',
+        image: 'headphone.png',
         category: 'Headphones'),
     Product(
-        price: 200,
-        name: 'headphone-2',
-        brand: 'asus',
+        price: 1799,
+        name: 'Mi Super Bass Wireless Headphones',
+        brand: 'Mi',
         descreption: 'description',
-        image: 'laptop.png',
+        image: 'headphone1.png',
         category: 'Headphones'),
     Product(
-        price: 400,
-        name: 'headphone-3',
-        brand: 'asus',
+        price: 88,
+        name: 'Casque Audio Sans Fil aWear',
+        brand: 'KREAFUNK',
         descreption: 'description',
-        image: 'laptop.png',
+        image: 'headphone2.png',
         category: 'Headphones'),
   ];
 
   List<Product> pcs = [
     Product(
-        price: 400,
-        name: 'pc-1',
-        brand: 'asus',
+        price: 292,
+        name: 'HP Elite',
+        brand: 'HP',
         descreption: 'description',
-        image: 'laptop.png',
+        image: 'pc.png',
         category: 'PC\'s'),
     Product(
-        price: 200,
-        name: 'pc-2',
-        brand: 'asus',
+        price: 305,
+        name: 'Dell Optiplex 790',
+        brand: 'Dell',
         descreption: 'description',
-        image: 'laptop.png',
+        image: 'pc1.png',
         category: 'PC\'s'),
     Product(
-        price: 400,
-        name: 'pc-3',
-        brand: 'asus',
+        price: 299,
+        name: 'Dell Optiplex 7010',
+        brand: 'Dell',
         descreption: 'description',
-        image: 'laptop.png',
+        image: 'pc2.png',
         category: 'PC\'s'),
   ];
 
   List<Product> mobiles = [
     Product(
-        price: 400,
-        name: 'mobiles-1',
-        brand: 'asus',
+        price: 1249,
+        name: 'Galaxy S20 Ultra',
+        brand: 'Samsung',
         descreption: 'description',
-        image: 'laptop.png',
+        image: 'mobile.png',
         category: 'Mobiles'),
     Product(
-        price: 200,
-        name: 'mobiles-2',
-        brand: 'asus',
+        price: 1549,
+        name: 'Iphone 11 Pro Max',
+        brand: 'Apple',
         descreption: 'description',
-        image: 'laptop.png',
+        image: 'mobile1.png',
         category: 'Mobiles'),
     Product(
-        price: 400,
-        name: 'mobiles-3',
-        brand: 'asus',
+        price: 2100,
+        name: 'Asus Rog Phone 3',
+        brand: 'Asus',
         descreption: 'description',
-        image: 'laptop.png',
+        image: 'mobile2.png',
         category: 'Mobiles'),
   ];
 
   String category = 'Laptops';
   List<Product> temp;
+  Product product;
 
   @override
+
   void initState() {
     super.initState();
     temp = laptops;
+      product = temp[Random().nextInt(temp.length)];
+
   }
 
   changeCategory(String cat) {
@@ -165,6 +173,8 @@ class _HomePageState extends State<HomePage> {
     }
   }
   int _selectedIndex = 0;
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -248,13 +258,14 @@ class _HomePageState extends State<HomePage> {
                                       padding: const EdgeInsets.only(bottom: 1),
                                       child: Material(
                                         elevation: 1,
-                                        color:  _selectedIndex == index ? Colors.black : Colors.white,
+                                        color:  _selectedIndex == index ? Colors.grey[700] : Colors.white,
                                         borderRadius: BorderRadius.circular(30),
                                         child: GestureDetector(
                                           onTap: () {
                                             setState(() {
                                               _selectedIndex = index;
                                               changeCategory(categories[index]);
+                                              product = temp[Random().nextInt(temp.length)];
                                             });
                                           },
                                           child: Container(
@@ -266,7 +277,7 @@ class _HomePageState extends State<HomePage> {
                                               style: TextStyle(
                                                 fontSize: 10,
                                                 fontWeight: FontWeight.bold,
-                                                color: _selectedIndex == index ? Colors.white : Colors.black,
+                                                color: _selectedIndex == index ? Colors.white : Colors.grey[700],
                                               ),
                                             ),
                                           )),
@@ -306,6 +317,7 @@ class _HomePageState extends State<HomePage> {
                                               Text(
                                                 temp[index].brand,
                                                 style: TextStyle(
+                                                  fontSize: 12,
                                                     color: Colors.white,
                                                     fontWeight:
                                                         FontWeight.bold),
@@ -315,13 +327,20 @@ class _HomePageState extends State<HomePage> {
                                                 temp[index].name,
                                                 style: TextStyle(
                                                     color: Colors.white,
-                                                    fontSize: 20,
+                                                    fontSize: 16,
                                                     fontWeight:
                                                         FontWeight.bold),
+                                                overflow: TextOverflow.ellipsis,
+                                                maxLines: 2,
                                               ),
                                               SizedBox(height: 32),
-                                              Image.asset(
-                                                  'assets/${temp[index].image}'),
+                                              Padding(
+                                                padding: const EdgeInsets.only(left: 20),
+                                                child: Image.asset(
+                                                    'assets/${temp[index].image}',
+                                                  height: 100,
+                                                ),
+                                              ),
                                               Expanded(child: SizedBox()),
                                               Row(
                                                 mainAxisAlignment:
@@ -419,10 +438,13 @@ class _HomePageState extends State<HomePage> {
                                                   width: 110,
                                                   height: 130,
                                                   color: greyCard,
-                                                  child: Image.asset(
-                                                    'assets/laptop.png',
-                                                    width: 100,
-                                                    fit: BoxFit.fitWidth,
+                                                  child: Padding(
+                                                    padding: const EdgeInsets.all(10.0),
+                                                    child: Image.asset(
+                                                      'assets/${product.image}',
+                                                      width: 100,
+                                                      fit: BoxFit.fitWidth,
+                                                    ),
                                                   ),
                                                 ),
                                               ),
@@ -435,26 +457,32 @@ class _HomePageState extends State<HomePage> {
                                                       CrossAxisAlignment.start,
                                                   children: <Widget>[
                                                     Text(
-                                                      'ASUS',
+                                                      product.brand,
                                                       style: TextStyle(
+                                                        fontSize: 12,
                                                           fontWeight:
                                                               FontWeight.bold,
                                                           color: Colors.white),
                                                     ),
                                                     SizedBox(height: 5),
-                                                    Text(
-                                                      'Laptop',
-                                                      style: TextStyle(
-                                                          fontSize: 20,
-                                                          fontWeight:
-                                                              FontWeight.bold,
-                                                          color: Colors.white),
+                                                    SizedBox(
+                                                      width: 150,
+                                                      child: Text(
+                                                        product.name,
+                                                        style: TextStyle(
+                                                            fontSize: 16,
+                                                            fontWeight:
+                                                                FontWeight.bold,
+                                                            color: Colors.white),
+                                                        maxLines: 2,
+                                                        overflow: TextOverflow.ellipsis,
+                                                      ),
                                                     ),
                                                     Expanded(child: SizedBox()),
                                                     Text(
-                                                      '350\$',
+                                                      '${product.price}\$',
                                                       style: TextStyle(
-                                                          fontSize: 17,
+                                                          fontSize: 15,
                                                           fontWeight:
                                                               FontWeight.bold,
                                                           color: Colors.white),
