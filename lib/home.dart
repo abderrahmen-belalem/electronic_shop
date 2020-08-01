@@ -1,5 +1,6 @@
 import 'dart:math';
 import 'package:electronic_app/models/product.dart';
+import 'package:electronic_app/services/detail_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'const.dart';
@@ -241,8 +242,7 @@ class _HomePageState extends State<HomePage> {
                           Expanded(
                             flex: 1,
                             child: Padding(
-                              padding: const EdgeInsets.only(
-                                  left: 35, top: 3, bottom: 0),
+                              padding: const EdgeInsets.only(left: 20, top: 3),
                               child: ListView.separated(
                                   separatorBuilder: (context, index) {
                                     return SizedBox(width: 8);
@@ -292,7 +292,7 @@ class _HomePageState extends State<HomePage> {
                           Expanded(
                             flex: 10,
                             child: Padding(
-                              padding: const EdgeInsets.fromLTRB(45, 20, 0, 0),
+                              padding: const EdgeInsets.only(left: 45, top: 20),
                               child: ListView.separated(
                                   separatorBuilder: (context, index) {
                                     return SizedBox(width: 30);
@@ -381,11 +381,14 @@ class _HomePageState extends State<HomePage> {
                                                         color: Colors.white,
                                                         child: Material(
                                                           child: Padding(
-                                                            padding: const EdgeInsets.all(5.0),
+                                                            padding:
+                                                                const EdgeInsets
+                                                                    .all(5.0),
                                                             child: Icon(
-                                                               Icons.arrow_forward,
-                                                               size: 18,
-                                                             ),
+                                                              Icons
+                                                                  .arrow_forward,
+                                                              size: 18,
+                                                            ),
                                                           ),
                                                         ),
                                                       ),
