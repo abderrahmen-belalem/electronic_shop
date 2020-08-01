@@ -1,3 +1,5 @@
 import 'package:flutter/material.dart';
 
-Color greyCard = Color(0XFFA4A4A4);
+Color primeryColor = Color(0XFF9181BD);
+Color seconderyColor =  Color(0XFF462261);
+Color accentColor = Color(0XFF74647C);

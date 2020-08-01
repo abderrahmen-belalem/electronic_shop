@@ -1,10 +1,8 @@
 import 'dart:math';
-
 import 'package:electronic_app/models/product.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'const.dart';
-
 
 class HomePage extends StatefulWidget {
   @override
@@ -145,12 +143,10 @@ class _HomePageState extends State<HomePage> {
   Product product;
 
   @override
-
   void initState() {
     super.initState();
     temp = laptops;
-      product = temp[Random().nextInt(temp.length)];
-
+    product = temp[Random().nextInt(temp.length)];
   }
 
   changeCategory(String cat) {
@@ -172,9 +168,8 @@ class _HomePageState extends State<HomePage> {
         temp = mobiles;
     }
   }
+
   int _selectedIndex = 0;
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -188,7 +183,7 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Colors.black,
         leading: Builder(
           builder: (BuildContext context) {
-            return  Padding(
+            return Padding(
               padding: const EdgeInsets.fromLTRB(10, 5, 0, 0),
               child: CircleAvatar(
                 backgroundColor: Colors.white,
@@ -200,13 +195,13 @@ class _HomePageState extends State<HomePage> {
                   onPressed: () {
                     Scaffold.of(context).openDrawer();
                   },
-                  tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
+                  tooltip:
+                      MaterialLocalizations.of(context).openAppDrawerTooltip,
                 ),
               ),
             );
           },
         ),
-
         actions: <Widget>[
           IconButton(icon: Icon(Icons.shopping_cart), onPressed: () {}),
         ],
@@ -246,7 +241,8 @@ class _HomePageState extends State<HomePage> {
                           Expanded(
                             flex: 1,
                             child: Padding(
-                              padding: const EdgeInsets.only(left: 35, top: 3, bottom: 0),
+                              padding: const EdgeInsets.only(
+                                  left: 35, top: 3, bottom: 0),
                               child: ListView.separated(
                                   separatorBuilder: (context, index) {
                                     return SizedBox(width: 8);
@@ -258,14 +254,17 @@ class _HomePageState extends State<HomePage> {
                                       padding: const EdgeInsets.only(bottom: 1),
                                       child: Material(
                                         elevation: 1,
-                                        color:  _selectedIndex == index ? Colors.grey[700] : Colors.white,
+                                        color: _selectedIndex == index
+                                            ? Color(0XFF74647C)
+                                            : Colors.white,
                                         borderRadius: BorderRadius.circular(30),
                                         child: GestureDetector(
                                           onTap: () {
                                             setState(() {
                                               _selectedIndex = index;
                                               changeCategory(categories[index]);
-                                              product = temp[Random().nextInt(temp.length)];
+                                              product = temp[Random()
+                                                  .nextInt(temp.length)];
                                             });
                                           },
                                           child: Container(
@@ -277,7 +276,9 @@ class _HomePageState extends State<HomePage> {
                                               style: TextStyle(
                                                 fontSize: 10,
                                                 fontWeight: FontWeight.bold,
-                                                color: _selectedIndex == index ? Colors.white : Colors.grey[700],
+                                                color: _selectedIndex == index
+                                                    ? Colors.white
+                                                    : accentColor,
                                               ),
                                             ),
                                           )),
@@ -289,7 +290,7 @@ class _HomePageState extends State<HomePage> {
                           ),
                           SizedBox(height: 5),
                           Expanded(
-                            flex:10,
+                            flex: 10,
                             child: Padding(
                               padding: const EdgeInsets.fromLTRB(45, 20, 0, 0),
                               child: ListView.separated(
@@ -307,7 +308,7 @@ class _HomePageState extends State<HomePage> {
                                         shape: RoundedRectangleBorder(
                                             borderRadius:
                                                 BorderRadius.circular(30)),
-                                        color: greyCard,
+                                        color: primeryColor,
                                         child: Padding(
                                           padding: const EdgeInsets.all(18.0),
                                           child: Column(
@@ -317,7 +318,7 @@ class _HomePageState extends State<HomePage> {
                                               Text(
                                                 temp[index].brand,
                                                 style: TextStyle(
-                                                  fontSize: 12,
+                                                    fontSize: 12,
                                                     color: Colors.white,
                                                     fontWeight:
                                                         FontWeight.bold),
@@ -335,9 +336,10 @@ class _HomePageState extends State<HomePage> {
                                               ),
                                               SizedBox(height: 32),
                                               Padding(
-                                                padding: const EdgeInsets.only(left: 20),
+                                                padding: const EdgeInsets.only(
+                                                    left: 20),
                                                 child: Image.asset(
-                                                    'assets/${temp[index].image}',
+                                                  'assets/${temp[index].image}',
                                                   height: 100,
                                                 ),
                                               ),
@@ -373,15 +375,18 @@ class _HomePageState extends State<HomePage> {
                                                     borderRadius:
                                                         BorderRadius.circular(
                                                             8),
-                                                    child: Container(
-                                                      color: Colors.white,
-                                                      child: Padding(
-                                                        padding:
-                                                            const EdgeInsets
-                                                                .all(5.0),
-                                                        child: Icon(
-                                                          Icons.arrow_forward,
-                                                          size: 18,
+                                                    child: GestureDetector(
+                                                      onTap: () {},
+                                                      child: Container(
+                                                        color: Colors.white,
+                                                        child: Material(
+                                                          child: Padding(
+                                                            padding: const EdgeInsets.all(5.0),
+                                                            child: Icon(
+                                                               Icons.arrow_forward,
+                                                               size: 18,
+                                                             ),
+                                                          ),
                                                         ),
                                                       ),
                                                     ),
@@ -408,7 +413,7 @@ class _HomePageState extends State<HomePage> {
                                   child: Text(
                                     'Best Selling',
                                     style: TextStyle(
-                                        fontSize: 16,
+                                        fontSize: 20,
                                         fontWeight: FontWeight.w700),
                                   ),
                                 ),
@@ -423,7 +428,7 @@ class _HomePageState extends State<HomePage> {
                                         width:
                                             MediaQuery.of(context).size.width /
                                                 1.17,
-                                        color: Colors.black,
+                                        color: seconderyColor,
                                         child: Padding(
                                           padding: const EdgeInsets.fromLTRB(
                                               14, 14, 20, 14),
@@ -437,9 +442,11 @@ class _HomePageState extends State<HomePage> {
                                                 child: Container(
                                                   width: 110,
                                                   height: 130,
-                                                  color: greyCard,
+                                                  color: primeryColor,
                                                   child: Padding(
-                                                    padding: const EdgeInsets.all(10.0),
+                                                    padding:
+                                                        const EdgeInsets.all(
+                                                            10.0),
                                                     child: Image.asset(
                                                       'assets/${product.image}',
                                                       width: 100,
@@ -459,7 +466,7 @@ class _HomePageState extends State<HomePage> {
                                                     Text(
                                                       product.brand,
                                                       style: TextStyle(
-                                                        fontSize: 12,
+                                                          fontSize: 12,
                                                           fontWeight:
                                                               FontWeight.bold,
                                                           color: Colors.white),
@@ -473,9 +480,11 @@ class _HomePageState extends State<HomePage> {
                                                             fontSize: 16,
                                                             fontWeight:
                                                                 FontWeight.bold,
-                                                            color: Colors.white),
+                                                            color:
+                                                                Colors.white),
                                                         maxLines: 2,
-                                                        overflow: TextOverflow.ellipsis,
+                                                        overflow: TextOverflow
+                                                            .ellipsis,
                                                       ),
                                                     ),
                                                     Expanded(child: SizedBox()),
