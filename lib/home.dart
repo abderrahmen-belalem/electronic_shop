@@ -175,13 +175,13 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: primeryColor,
       drawer: Drawer(
         child: Text('7'),
       ),
       appBar: AppBar(
-        elevation: 0,
-        backgroundColor: Colors.black,
+        elevation: 2,
+        backgroundColor: Colors.white,
         leading: Builder(
           builder: (BuildContext context) {
             return Padding(
@@ -204,7 +204,12 @@ class _HomePageState extends State<HomePage> {
           },
         ),
         actions: <Widget>[
-          IconButton(icon: Icon(Icons.shopping_cart), onPressed: () {}),
+          IconButton(icon: Icon(
+            Icons.shopping_cart,
+            color: Colors.black,
+          ),
+              onPressed: () {}
+          ),
         ],
       ),
       body: Stack(
@@ -255,7 +260,7 @@ class _HomePageState extends State<HomePage> {
                                       child: Material(
                                         elevation: 1,
                                         color: _selectedIndex == index
-                                            ? Color(0XFF74647C)
+                                            ? accentColor
                                             : Colors.white,
                                         borderRadius: BorderRadius.circular(30),
                                         child: GestureDetector(
@@ -431,7 +436,7 @@ class _HomePageState extends State<HomePage> {
                                         width:
                                             MediaQuery.of(context).size.width /
                                                 1.17,
-                                        color: seconderyColor,
+                                        color: accentColor,
                                         child: Padding(
                                           padding: const EdgeInsets.fromLTRB(
                                               14, 14, 20, 14),

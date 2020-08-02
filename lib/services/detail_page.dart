@@ -14,9 +14,9 @@ class _DetailPageState extends State<DetailPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Colors.black,
+        backgroundColor: Color(0XFFFF9966),
         centerTitle: true,
         leading: IconButton(
         icon: Icon(
@@ -55,7 +55,7 @@ class _DetailPageState extends State<DetailPage> {
                   topRight: Radius.circular(55)
                 ),
               ),
-              color: alternativeColor,
+              color: Color(0XFFFF9966),
               child: Padding(
                 padding: const EdgeInsets.only(left: 20, top: 25),
                 child: Column(
@@ -117,14 +117,14 @@ class _DetailPageState extends State<DetailPage> {
                               SizedBox(width: 45),
                               Icon(
                                   Icons.shopping_cart,
-                                color: alternativeColor,
+                                color: Color(0XFFFF9966),
                               ),
                               SizedBox(width: 10),
                               Text(
                                   'Add To Cart',
                                   style: TextStyle(
                                   fontWeight: FontWeight.bold,
-                                  color: alternativeColor,
+                                  color: Color(0XFFFF9966),
                                   fontSize: 20
                                 ),
                               ),
