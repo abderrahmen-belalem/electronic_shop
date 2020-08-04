@@ -535,7 +535,7 @@ class _HomePageState extends State<HomePage> {
                                                                 5.0),
                                                         child: Icon(
                                                           Icons.arrow_forward,
-                                                          size: 18,
+                                                          size: 19,
                                                         ),
                                                       ),
                                                     ),
