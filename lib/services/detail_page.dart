@@ -26,13 +26,6 @@ class _DetailPageState extends State<DetailPage> {
       appBar: AppBar(
         backgroundColor: Colors.black,
         centerTitle: true,
-        leading: IconButton(
-        icon: Icon(
-          Icons.arrow_back,
-              color: Colors.white,
-        )
-            , onPressed: () {}
-        ),
         actions: <Widget>[
           IconButton(
               icon: Icon(Icons.shopping_cart),
