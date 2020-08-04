@@ -1,3 +1,4 @@
+import 'package:electronic_app/models/product.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter/material.dart';
@@ -6,6 +7,13 @@ import '../const.dart';
 
 
 class DetailPage extends StatefulWidget {
+
+  Product product;
+
+  DetailPage({this.product});
+
+
+
   @override
   _DetailPageState createState() => _DetailPageState();
 }
@@ -14,9 +22,9 @@ class _DetailPageState extends State<DetailPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.black,
       appBar: AppBar(
-        backgroundColor: Color(0XFFFF9966),
+        backgroundColor: Colors.black,
         centerTitle: true,
         leading: IconButton(
         icon: Icon(
@@ -40,7 +48,7 @@ class _DetailPageState extends State<DetailPage> {
             flex: 6,
             child: Center(
               child: Image.asset(
-                  'assets/laptop.png',
+                  'assets/${widget.product.image}',
                 height: 330,
                 width: 330,
               ),
@@ -55,7 +63,7 @@ class _DetailPageState extends State<DetailPage> {
                   topRight: Radius.circular(55)
                 ),
               ),
-              color: Color(0XFFFF9966),
+              color: accentColor,
               child: Padding(
                 padding: const EdgeInsets.only(left: 20, top: 25),
                 child: Column(
@@ -65,21 +73,26 @@ class _DetailPageState extends State<DetailPage> {
                       padding: const EdgeInsets.only(top: 10),
                       child: Row(
                         children: <Widget>[
-                          Text(
-                            'laptop',
-                            style: TextStyle(
-                              fontSize: 35,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white
+                          Container(
+                            child: Text(
+                              widget.product.name,
+                              style: TextStyle(
+                                fontSize: 22,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+                              ),
+                              overflow: TextOverflow.ellipsis,
+                              maxLines: 2,
                             ),
+                            width: 200,
                           ),
                           Expanded(child: SizedBox()),
                           Padding(
-                            padding: const EdgeInsets.only(right: 20, top: 5),
+                            padding: const EdgeInsets.only(right: 30, top: 5),
                             child: Text(
-                              '300\$',
+                              '${widget.product.price}\$',
                               style: TextStyle(
-                                fontSize: 35,
+                                fontSize: 25,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white
                               ),
@@ -88,7 +101,7 @@ class _DetailPageState extends State<DetailPage> {
                         ],
                       ),
                     ),
-                    SizedBox(height: 20),
+                    SizedBox(height: 35),
                     Padding(
                       padding: const EdgeInsets.only(right: 8),
                       child: Text(
@@ -117,14 +130,14 @@ class _DetailPageState extends State<DetailPage> {
                               SizedBox(width: 45),
                               Icon(
                                   Icons.shopping_cart,
-                                color: Color(0XFFFF9966),
+                                color: accentColor,
                               ),
                               SizedBox(width: 10),
                               Text(
                                   'Add To Cart',
                                   style: TextStyle(
                                   fontWeight: FontWeight.bold,
-                                  color: Color(0XFFFF9966),
+                                  color: accentColor,
                                   fontSize: 20
                                 ),
                               ),

@@ -175,13 +175,12 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: primeryColor,
+      backgroundColor: Colors.black,
       drawer: Drawer(
         child: Text('7'),
       ),
       appBar: AppBar(
-        elevation: 2,
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.black,
         leading: Builder(
           builder: (BuildContext context) {
             return Padding(
@@ -206,7 +205,7 @@ class _HomePageState extends State<HomePage> {
         actions: <Widget>[
           IconButton(icon: Icon(
             Icons.shopping_cart,
-            color: Colors.black,
+            color: Colors.white,
           ),
               onPressed: () {}
           ),
@@ -381,19 +380,24 @@ class _HomePageState extends State<HomePage> {
                                                         BorderRadius.circular(
                                                             8),
                                                     child: GestureDetector(
-                                                      onTap: () {},
+                                                      onTap: () {
+                                                        Navigator.push(
+                                                            context,
+                                                            MaterialPageRoute(
+                                                            builder: (context) => DetailPage(product: temp[index]),
+                                                        ),
+                                                        );
+                                                      },
                                                       child: Container(
                                                         color: Colors.white,
-                                                        child: Material(
-                                                          child: Padding(
-                                                            padding:
-                                                                const EdgeInsets
-                                                                    .all(5.0),
-                                                            child: Icon(
-                                                              Icons
-                                                                  .arrow_forward,
-                                                              size: 18,
-                                                            ),
+                                                        child: Padding(
+                                                          padding:
+                                                              const EdgeInsets
+                                                                  .all(5.0),
+                                                          child: Icon(
+                                                            Icons
+                                                                .arrow_forward,
+                                                            size: 18,
                                                           ),
                                                         ),
                                                       ),
@@ -514,15 +518,25 @@ class _HomePageState extends State<HomePage> {
                                                 child: ClipRRect(
                                                   borderRadius:
                                                       BorderRadius.circular(9),
-                                                  child: Container(
-                                                    color: Colors.white,
-                                                    child: Padding(
-                                                      padding:
-                                                          const EdgeInsets.all(
-                                                              5.0),
-                                                      child: Icon(
-                                                        Icons.arrow_forward,
-                                                        size: 18,
+                                                  child: GestureDetector(
+                                                    onTap: () {
+                                                      Navigator.push(
+                                                        context,
+                                                        MaterialPageRoute(
+                                                          builder: (context) => DetailPage(product: product[]),
+                                                        ),
+                                                      );
+                                                    },
+                                                    child: Container(
+                                                      color: Colors.white,
+                                                      child: Padding(
+                                                        padding:
+                                                            const EdgeInsets.all(
+                                                                5.0),
+                                                        child: Icon(
+                                                          Icons.arrow_forward,
+                                                          size: 18,
+                                                        ),
                                                       ),
                                                     ),
                                                   ),
