@@ -24,21 +24,21 @@ class _HomePageState extends State<HomePage> {
         price: 1399,
         name: 'Microsoft Surface Laptop 3 Twister',
         brand: 'Microsoft',
-        descreption: 'description',
+        descreption: 'Processeur : 	Intel Core i7-1065G7 \nMémoire vive (RAM) : 16 Go \nCapacité de stockage principal : 256 Go \nTaille d\'écran : 13.5 \nPuce graphique : Intel Iris Plus Graphics',
         image: 'laptop.png',
         category: 'Laptops'),
     Product(
         price: 1499,
         name: 'Microsoft Surface Laptop 3',
         brand: 'Microsoft',
-        descreption: 'description',
+        descreption: 'Processeur : AMD Ryzen 7 3780U \nMémoire vive (RAM) : 16 Go \nCapacité de stockage principal : 512 Go \nTaille d\'écran : 15 \nPuce graphique : AMD Radeon RX Vega 11',
         image: 'laptop2.png',
         category: 'Laptops'),
     Product(
         price: 1069,
         name: 'Microsoft Surface Pro 7',
         brand: 'Microsft',
-        descreption: 'description',
+        descreption: 'Processeur :	Intel Core i7-1065G7 \nMémoire vive (RAM) : 16 Go \nCapacité de stockage principal : 256 Go \nTaille d\'écran :	12.3 \nPuce graphique	: Intel Iris Plus Graphics',
         image: 'laptop3.png',
         category: 'Laptops'),
   ];
@@ -177,7 +177,6 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: Colors.black,
       drawer: Drawer(
-        child: Text('7'),
       ),
       appBar: AppBar(
         backgroundColor: Colors.black,

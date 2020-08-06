@@ -95,13 +95,13 @@ class _DetailPageState extends State<DetailPage> {
                       ),
                     ),
                     SizedBox(height: 35),
-                    Padding(
-                      padding: const EdgeInsets.only(right: 8),
+                    Align(
+                      alignment: Alignment.centerLeft,
                       child: Text(
-                        '''Laptop désigne un ordinateur portable, c\'est-à-dire un ordinateur avec un clavier et un écran rabattable que l\'on peut transporter avec soi''',
+                        widget.product.descreption,
                           style: TextStyle(
                           wordSpacing: 3,
-                          fontSize: 20,
+                          fontSize: 18,
                           color: Colors.white
                         ),
                       ),
