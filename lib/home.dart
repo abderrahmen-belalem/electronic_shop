@@ -24,7 +24,7 @@ class _HomePageState extends State<HomePage> {
         price: 1399,
         name: 'Microsoft Surface Laptop 3 Twister',
         brand: 'Microsoft',
-        descreption: 'Processeur : 	Intel Core i7-1065G7 \nMémoire vive (RAM) : 16 Go \nCapacité de stockage principal : 256 Go \nTaille d\'écran : 13.5 \nPuce graphique : Intel Iris Plus Graphics',
+        descreption: 'Processeur : Intel Core i7-1065G7 \nMémoire vive (RAM) : 16 Go \nCapacité de stockage principal : 256 Go \nTaille d\'écran : 13.5 \nPuce graphique : Intel Iris Plus Graphics',
         image: 'laptop.png',
         category: 'Laptops'),
     Product(
@@ -38,7 +38,7 @@ class _HomePageState extends State<HomePage> {
         price: 1069,
         name: 'Microsoft Surface Pro 7',
         brand: 'Microsft',
-        descreption: 'Processeur :	Intel Core i7-1065G7 \nMémoire vive (RAM) : 16 Go \nCapacité de stockage principal : 256 Go \nTaille d\'écran :	12.3 \nPuce graphique	: Intel Iris Plus Graphics',
+        descreption: 'Processeur : Intel Core i7-1065G7 \nMémoire vive (RAM) : 16 Go \nCapacité de stockage principal : 256 Go \nTaille d\'écran :	12.3 \nPuce graphique	: Intel Iris Plus Graphics',
         image: 'laptop3.png',
         category: 'Laptops'),
   ];
