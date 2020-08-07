@@ -177,6 +177,116 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: Colors.black,
       drawer: Drawer(
+      child: ListView(
+        children: <Widget>[
+          UserAccountsDrawerHeader(
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                  image: AssetImage('assets/purple.jpg'),
+                fit: BoxFit.cover,
+              )
+            ) ,
+            accountName: Text('Abderrahmen Belalem'),
+            accountEmail: Text('belalemabderrahmen@gmail.com'),
+            currentAccountPicture: CircleAvatar(
+            backgroundImage: AssetImage('assets/abderrahmen.jpg'),
+            ),
+          ),
+          ListTile(
+            title: Text(
+              'Home',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 16
+              ),
+            ),
+            leading: Icon(
+              Icons.home,
+              color: Colors.grey[700],
+            ),
+          ),
+          ListTile(
+            title: Text(
+              'My account',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 16
+       ),
+       ),
+            leading: Icon(
+              Icons.account_circle,
+              color: Colors.grey[700],
+          ),
+          ),
+          ListTile(
+            title: Text(
+              'My orders',
+              style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 16
+              ),
+            ),
+            leading: Icon(
+              Icons.content_paste,
+              color: Colors.grey[700],
+            ),
+          ),
+          Divider(),
+          ListTile(
+            title: Text(
+              'Shopping cart',
+              style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 16
+              ),
+            ),
+            leading: Icon(
+              Icons.shopping_cart,
+              color: Colors.grey[700],
+            ),
+          ),
+          ListTile(
+            title: Text(
+              'My favorites',
+              style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 16
+              ),
+            ),
+            leading: Icon(
+              Icons.star,
+              color: Colors.grey[700],
+            ),
+          ),
+          Divider(),
+          ListTile(
+            title: Text(
+              'Settings',
+              style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 16
+              ),
+            ),
+            leading: Icon(
+              Icons.settings,
+              color: Colors.grey[700],
+            ),
+          ),
+          ListTile(
+            title: Text(
+              'Help',
+              style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 16
+              ),
+            ),
+            leading: Icon(
+              Icons.help,
+              color: Colors.grey[700],
+            ),
+          ),
+        ],
+      ),
       ),
       appBar: AppBar(
         backgroundColor: Colors.black,
