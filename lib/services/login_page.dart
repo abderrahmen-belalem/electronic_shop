@@ -76,6 +76,9 @@ class _LoginPageState extends State<LoginPage> {
                           )
                         ),
                         child: TextField(
+                          style: TextStyle(
+                            color: Colors.white
+                          ),
                           decoration: InputDecoration(
                             border: InputBorder.none,
                             hintText: 'Username',
@@ -94,7 +97,10 @@ class _LoginPageState extends State<LoginPage> {
                             )
                         ),
                         child: TextField(
-                          decoration: InputDecoration(
+                              style: TextStyle(
+                                color: Colors.white
+                              ),
+                              decoration: InputDecoration(
                               border: InputBorder.none,
                               hintText: 'Password',
                               hintStyle: TextStyle(
@@ -107,7 +113,7 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                   ),
                 ),
-                SizedBox(height: 20),
+                SizedBox(height: 60),
                 FadeAnimation(
                   1,
                   Center(
@@ -138,13 +144,21 @@ class _LoginPageState extends State<LoginPage> {
                         borderRadius: BorderRadius.circular(50),
                         color: Color.fromRGBO(49, 39, 79, 1)
                       ),
-                      child: Center(
-                        child: Text(
-                          'Login',
-                          style: TextStyle(
-                            color: Colors.white
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Icon(
+                            Icons.supervisor_account,
+                            color: Colors.white,
                           ),
-                        ),
+                          SizedBox(width: 10),
+                          Text(
+                            'Login',
+                            style: TextStyle(
+                                color: Colors.white
+                            ),
+                          ),
+                        ],
                       ),
                   ),
                    ),
