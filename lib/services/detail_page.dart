@@ -56,7 +56,7 @@ class _DetailPageState extends State<DetailPage> {
                   topRight: Radius.circular(55)
                 ),
               ),
-              color: accentColor,
+              color: seconderyColor,
               child: Padding(
                 padding: const EdgeInsets.only(left: 20, top: 25),
                 child: Column(
@@ -123,14 +123,14 @@ class _DetailPageState extends State<DetailPage> {
                               SizedBox(width: 45),
                               Icon(
                                   Icons.shopping_cart,
-                                color: accentColor,
+                                color: seconderyColor,
                               ),
                               SizedBox(width: 10),
                               Text(
                                   'Add To Cart',
                                   style: TextStyle(
                                   fontWeight: FontWeight.bold,
-                                  color: accentColor,
+                                  color: seconderyColor,
                                   fontSize: 20
                                 ),
                               ),

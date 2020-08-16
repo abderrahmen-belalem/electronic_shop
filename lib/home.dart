@@ -368,7 +368,7 @@ class _HomePageState extends State<HomePage> {
                                       child: Material(
                                         elevation: 1,
                                         color: _selectedIndex == index
-                                            ? accentColor
+                                            ? seconderyColor
                                             : Colors.white,
                                         borderRadius: BorderRadius.circular(30),
                                         child: GestureDetector(
@@ -391,7 +391,7 @@ class _HomePageState extends State<HomePage> {
                                                 fontWeight: FontWeight.bold,
                                                 color: _selectedIndex == index
                                                     ? Colors.white
-                                                    : accentColor,
+                                                    : seconderyColor,
                                               ),
                                             ),
                                           )),
@@ -549,7 +549,7 @@ class _HomePageState extends State<HomePage> {
                                         width:
                                             MediaQuery.of(context).size.width /
                                                 1.17,
-                                        color: accentColor,
+                                        color: seconderyColor,
                                         child: Padding(
                                           padding: const EdgeInsets.fromLTRB(
                                               14, 14, 20, 14),
