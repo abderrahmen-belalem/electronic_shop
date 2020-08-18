@@ -6,7 +6,7 @@ An app which allows you to buy and explore electronic products
 
 ## Screenshots:
 
-
+<img src="screenshots/login.jpg" width="200" /> <img src="screenshots/home.jpg" width="200" /> <img src="screenshots/detail.jpg" width="200" /> <img src="screenshots/drawer.jpg" width="200" />
 
 ## Tools & Languages:
 
